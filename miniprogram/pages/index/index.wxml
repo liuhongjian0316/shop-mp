@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<ui-sys footer="{{false}}" tabbar="{{true}}" bg="bg-red">
+  <ui-navbar back="{{false}}" isSlot opacity scrollTop="0" placeholder="{{true}}">
+    <!--logo-->
+    <view
+      style="width:{{sys_capsule.left * 0.5}}px;height:{{sys_capsule.height}}px;margin-left:{{sys_info.screenWidth - sys_capsule.right}}px;"
+      class="bg-yellow">
+      <image src="https://mp.color-ui.com/images/logo.png" style="width:100%;height:{{sys_capsule.height}}px;" />
+    </view>
+  </ui-navbar>
+  <ui-fixed sticky>
+    <!--search-->
+    <view class="round bg-white search-box flex " style="margin: 0rpx {{sys_info.screenWidth - sys_capsule.right}}px;">
+      <view class="_icon-search px-4" />
+      <swiper autoplay vertical interval="3000" circular class="search-show-value"
+        style="width:{{sys_info.screenWidth * 0.4}}px;">
+        <block wx:for="{{10}}" wx:key="*this">
+          <swiper-item catchtouchmove='catchTouchMove'>苹果{{index}}</swiper-item>
+        </block>
+      </swiper>
+      <view class="cicon-camera-o camera-icon">
+      </view>
+      <button class="search-btn ui-btn sm bg-red round">
+        搜索123
+      </button>
+    </view>
+
+    <!--tab-->
+    <view class="flex type-bar bg-red">
+      <scroll-view style="width:{{sys_info.screenWidth - 80* (sys_info.screenWidth / 750)}}px;" scroll-x="{{true}}"
+        scroll-y="{{false}}">
+        <view style="width:800px;height:80rpx;">123213</view>
+      </scroll-view>
+      <view class="choice-type bg-cyan border-left flex justify-center algin-center">
+        <text class="_icon-drop-down" />
+      </view>
+    </view>
+  </ui-fixed>
+
+  <view class="bg-blue w-100" style="height:8000px;">
+
+
+  </view>
+
+
+
+
+
+
+</ui-sys>

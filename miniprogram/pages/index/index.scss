@@ -1,0 +1,38 @@
+.search-box {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .search-show-value {
+    height: 60rpx;
+    line-height: 60rpx;
+  }
+  .camera-icon{
+    position: absolute;
+    right: 130rpx;
+  }
+  .search-btn{
+    position: absolute;
+    right: 4rpx;
+    width:120rpx;
+    height:56rpx;
+    line-height: 56rpx;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+
+.type-bar {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100vw;
+
+  .choice-type {
+    height: 80rpx;
+    width: 80rpx;
+    line-height: 80rpx;
+  }
+}

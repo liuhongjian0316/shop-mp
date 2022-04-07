@@ -1,0 +1,39 @@
+{
+  "usingComponents": {
+    "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys",
+    "ui-navbar": "mp-cu/colorUI/components/ui-navbar/ui-navbar",
+    "ui-fixed": "mp-cu/colorUI/components/ui-fixed/ui-fixed"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/index2/index2"
+  ],
+  "subPackages": [
+    {
+      "root": "user",
+      "name": "user",
+      "pages": [
+        "login/login"
+      ]
+    }
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/index2/index2"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "darkmode": true,
+  "sitemapLocation": "sitemap.json"
+}
