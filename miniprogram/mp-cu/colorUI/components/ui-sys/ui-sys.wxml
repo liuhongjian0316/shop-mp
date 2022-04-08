@@ -14,6 +14,6 @@
             showCancel="{{$cuStore.$dialog.showCancel}}" cancelText="{{$cuStore.$dialog.cancelText}}" confirmText="{{$cuStore.$dialog.confirmText}}"/>
         <ui-toast name="sys_dialog" title="{{$cuStore.$toast.title}}" duration="{{$cuStore.$toast.duration}}" mask="{{$cuStore.$toast.mask}}"
                   isLoading="{{$cuStore.$toast.isLoading}}" image="{{$cuStore.$toast.image}}" icon="{{$cuStore.$toast.icon}}"/>
-        <image src="{{img}}" mode="aspectFill" class="page-img" wx:if="{{img}}" />
+        <image src="{{img}}" mode="aspectFill" class="page-img" wx:if="{{img}}"  style="height:{{sys_navBar+(60+80)*(sys_info.screenWidth/750)}}px;"/>
     </view>
 </view>

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "logo":"components/logo/index",
+    "search":"components/search/index",
+    "tab":"components/tab/index"
+  }
 }

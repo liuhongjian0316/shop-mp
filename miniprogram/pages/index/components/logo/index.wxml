@@ -1,0 +1,13 @@
+<view style="width:{{width}}px;height:{{height}}px;{{styles}};" class="flex align-center dashed-shine border-blue">
+    <image src="https://mp.color-ui.com/images/logo.png"
+        style="width:{{sys_capsule.height}}px;height:{{sys_capsule.height}}px;" />
+    <swiper style="height:{{sys_capsule.height}}px;width:100%;line-height:{{sys_capsule.height}}px;" autoplay vertical
+        interval="5000" circular class="text-cut text-white text-bold">
+        <swiper-item>新时代粮油节</swiper-item>
+        <swiper-item>部分99减50</swiper-item>
+    </swiper>
+    <view class="logo-mask" style="width:{{width}}px;height:{{height}}px;"></view>
+    <view class="round bg-white">
+        <view class="cicon-angle ui-TC-Main text-sm"></view>
+    </view>
+</view>

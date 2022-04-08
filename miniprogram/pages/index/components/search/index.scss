@@ -1,0 +1,47 @@
+.search-box {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .search-show-value {
+      height: 60rpx;
+      line-height: 60rpx;
+    }
+    .camera-icon{
+      position: absolute;
+      right: 150rpx;
+      font-size: 36rpx;
+    }
+    .search-btn{
+      position: absolute;
+      right: 10rpx;
+      width:110rpx;
+      height:50rpx;
+      line-height: 50rpx;
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+      animation: shareBtn 2s infinite;
+    }
+  }
+  
+  .swiper-mask{
+    position:absolute;
+    left:10rpx;
+    width: 100px;
+    height: 50rpx;
+    background:transparent;
+  }
+  
+  @keyframes shareBtn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

@@ -3,7 +3,7 @@ import ColorUI from '../mp-cu/main'
 export const colorUI = new ColorUI({
     config: {
         theme: 'light',
-        main: 'cyan',
+        main: 'purple',
         text: 1,
         footer: true,
         share: true,

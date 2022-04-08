@@ -1,48 +1,77 @@
 <!--index.wxml-->
-<ui-sys footer="{{false}}" tabbar="{{true}}" bg="bg-red">
+<ui-sys footer="{{false}}" tabbar="{{true}}" img="https://seopic.699pic.com/photo/40016/6974.jpg_wh1200.jpg">
   <ui-navbar back="{{false}}" isSlot opacity scrollTop="0" placeholder="{{true}}">
     <!--logo-->
-    <view
-      style="width:{{sys_capsule.left * 0.5}}px;height:{{sys_capsule.height}}px;margin-left:{{sys_info.screenWidth - sys_capsule.right}}px;"
-      class="bg-yellow">
-      <image src="https://mp.color-ui.com/images/logo.png" style="width:100%;height:{{sys_capsule.height}}px;" />
-    </view>
+    <logo width="{{sys_capsule.left * 0.5}}" height="{{sys_capsule.height}}"
+      styles="margin-left:{{sys_info.screenWidth - sys_capsule.right}}px;}}" />
   </ui-navbar>
   <ui-fixed sticky>
     <!--search-->
-    <view class="round bg-white search-box flex " style="margin: 0rpx {{sys_info.screenWidth - sys_capsule.right}}px;">
-      <view class="_icon-search px-4" />
-      <swiper autoplay vertical interval="3000" circular class="search-show-value"
-        style="width:{{sys_info.screenWidth * 0.4}}px;">
-        <block wx:for="{{10}}" wx:key="*this">
-          <swiper-item catchtouchmove='catchTouchMove'>苹果{{index}}</swiper-item>
+    <search sysInfo="{{sys_info}}" sysCapsule="{{sys_capsule}}" />
+    <!--tab-->
+    <tab sysInfo="{{sys_info}}" />
+  </ui-fixed>
+  <view class="ui-container px-3 py-2">
+    <!--分类商品-->
+    <view class="radius" style="overflow: hidden;">
+      <ui-swiper info="{{swiperList}}" dotStyle="long" dotCur="bg-white" />
+    </view>
+    <view style="position: relative;">
+      <swiper circular class="bg-white shadow-sm radius mt-3 pb-4" bind:change="changeSwiper">
+        <block wx:for="{{3}}" wx:key="index">
+          <swiper-item>
+            <view class="ui-grid grid-square ui-cols-5 p-3">
+              <view class="ui-item radius" wx:for="{{10}}" wx:key="index">
+                <view class="flex-center position-center flex-column">
+                  <view class="cicon-clothes text-cyan icon-xxl"></view>
+                  <view class="text-sm mt-2">京东超市</view>
+                </view>
+              </view>
+            </view>
+          </swiper-item>
         </block>
       </swiper>
-      <view class="cicon-camera-o camera-icon">
-      </view>
-      <button class="search-btn ui-btn sm bg-red round">
-        搜索123
-      </button>
-    </view>
-
-    <!--tab-->
-    <view class="flex type-bar bg-red">
-      <scroll-view style="width:{{sys_info.screenWidth - 80* (sys_info.screenWidth / 750)}}px;" scroll-x="{{true}}"
-        scroll-y="{{false}}">
-        <view style="width:800px;height:80rpx;">123213</view>
-      </scroll-view>
-      <view class="choice-type bg-cyan border-left flex justify-center algin-center">
-        <text class="_icon-drop-down" />
+      <view class="ui-swiper">
+        <view class="ui-swiper-dot line w-100">
+          <view wx:for="{{3}}" wx:key="index"
+            class="view {{mainCur === index?'cur ui-BG-Main':'bg-grey'}} {{mainCur}}" />
+        </view>
       </view>
     </view>
-  </ui-fixed>
+    <!--推荐图片-->
+    <image src="https://bpic.588ku.com/element_origin_min_pic/19/03/07/2bf7e2345a3f24af9922bc2933ff44e3.jpg"
+      class="flex my-2" style="height:160rpx;width:100%;" mode="center" />
+    <!--秒杀-->
+    <view class="spike-box shadow-sm radius">
+      <view class="header">
+        <text class="header-txt">京东秒杀</text>
+        <view class="border border-red round flex header-tag">
+          <view class="border-right bg-red  header-tag-left" style="overflow: hidden;">14点场</view>
+          <view class="header-tag-right text-red">00:01:48</view>
+        </view>
+        <view class="header-end flex text-dark-8">
+          <view>9.9抢燕窝</view>
+          <view class="_icon-forward"></view>
+        </view>
+      </view>
+      <view class="body">
+        <!--秒杀商品-->
+        <scroll-view scroll-x="{{true}}" style="width:100%;" class="shop-scroll"
+          enable-flex="{{true}}">
+          <view class="shop" wx:for="{{50}}" wx:key="*this">
+            <image src="https://bpic.588ku.com/element_origin_min_pic/21/11/22/a900db9f69fcecfc9c73891e97ba6e89.jpg">
+            </image>
+            <view class="tag text-price text-red text-bold text-cut border radius bg-red">
+              1200
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
 
-  <view class="bg-blue w-100" style="height:8000px;">
 
 
   </view>
-
-
 
 
 

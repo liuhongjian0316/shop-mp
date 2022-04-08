@@ -1,0 +1,96 @@
+.tab {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+    .ui-tab-scroll {
+        height: 80rpx;
+        line-height: 80rpx;
+        display: flex;
+
+        .tab-item {
+            width: max-content;
+            height: 80rpx;
+            padding: 0 20rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .tab-item-text {
+                height: 60rpx;
+                line-height: 60rpx;
+                width: max-content;
+            }
+
+            .tab-item-mark {
+                height: 8rpx;
+                border-radius: 6px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.1) 90%);
+            }
+        }
+    }
+
+    .choice-type {
+        height: 80rpx;
+        width: 80rpx;
+        line-height: 80rpx;
+
+        .expand {
+            transform: rotate(-90deg);
+        }
+
+        .shrink {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.type-modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 880;
+    opacity: 0;
+    outline: 0;
+    text-align: center;
+    transform: scale(1);
+    backface-visibility: hidden;
+    perspective: 2000rpx;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.type-modal-show {
+    opacity: 1;
+    transform: scale(1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: auto;
+    background: rgba(0,0,0,0.4);
+}
+
+.type-dialog {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+}
+.chocie-main{
+    margin: 0 auto;
+    border-bottom-right-radius: 20rpx !important;
+    border-bottom-left-radius: 20rpx !important;
+}

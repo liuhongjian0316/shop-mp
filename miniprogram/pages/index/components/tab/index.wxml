@@ -1,0 +1,29 @@
+<view class="tab">
+    <scroll-view scroll-x="{{true}}" class="ui-tab-scroll" enable-flex scroll-left="{{cur > 1 ? left : 0}}"
+        scroll-with-animation style="width:{{sysInfo.screenWidth - 80* (sysInfo.screenWidth / 750)}}px;">
+        <block wx:for="{{tab}}" wx:key="index">
+            <view class="tab-item tab-scroll-item-{{index}} flex flex-column" data-index="{{index}}"
+                data-item="{{item}}" bindtap="changeTab">
+                <view class="tab-item-text text-white {{index == cur ? 'text-bold' : ''}}">{{item}}</view>
+                <view class="tab-item-mark" wx:if="{{index == cur}}"></view>
+            </view>
+        </block>
+    </scroll-view>
+    <view class="choice-type border-left flex justify-center algin-center" bindtap="openClass">
+        <text class="cicon-angle text-white {{isExpand ? 'expand' : 'shrink'}}" />
+    </view>
+</view>
+
+<view class="type-modal type-modal-show" wx:if="{{isExpand}}"
+    style="top:{{sys_navBar+(60+80)*(sys_info.screenWidth/750)}}px;height:{{sys_info.screenHeight-(sys_navBar+(60+80+120)*(sys_info.screenWidth/750))-(sys_info.screenHeight-sys_info.safeArea.bottom)}}px;">
+    <view class="type-dialog" bindtap="closeMask">
+        <view class="bg-white text-xs chocie-main px-2 py-2">
+            <view class="ui-btn sm text-sm">全部分类</view>
+            <block wx:for="{{tab}}" wx:key="index">
+                <button
+                    class="ui-btn sm  my-2 mx-1 round text-sm {{index == cur ? 'border border-red bg-red-light' : 'bg-gray-d'}}"
+                    data-index="{{index}}" data-item="{{item}}" catchtap="changeTab">{{item}}</button>
+            </block>
+        </view>
+    </view>
+</view>

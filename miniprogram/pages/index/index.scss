@@ -1,38 +1,174 @@
-.search-box {
-  height: 60rpx;
-  display: flex;
-  align-items: center;
-  position: relative;
+.ui-swiper {
+    position: relative;
 
-  .search-show-value {
-    height: 60rpx;
-    line-height: 60rpx;
-  }
-  .camera-icon{
-    position: absolute;
-    right: 130rpx;
-  }
-  .search-btn{
-    position: absolute;
-    right: 4rpx;
-    width:120rpx;
-    height:56rpx;
-    line-height: 56rpx;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
-  }
+    .ui-swiper-main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .ui-swiper-main .image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .ui-swiper-dot {
+        position: absolute;
+        width: 100%;
+        height: 30rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.default .view {
+            display: inline-flex;
+            border-radius: 50rpx;
+            width: 6px;
+            height: 6px;
+            border: 2px solid transparent;
+            margin: 0 10rpx;
+            opacity: 0.3;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+            &.cur {
+                width: 8px;
+                height: 8px;
+                opacity: 1;
+                border: 0px solid transparent;
+            }
+
+            &.cur::after {
+                content: '';
+                border-radius: 50rpx;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+            }
+        }
+
+        &.long .view {
+            display: inline-block;
+            border-radius: 100rpx;
+            width: 6px;
+            height: 6px;
+            margin: 0 10rpx;
+            opacity: 0.3;
+            position: relative;
+
+            &.cur {
+                width: 24rpx;
+                opacity: 1;
+            }
+
+            &.cur::after {}
+        }
+
+        &.line {
+            bottom: 20rpx;
+
+            .view {
+                display: inline-block;
+                width: 30px;
+                height: 3px;
+                opacity: 0.3;
+                position: relative;
+
+                &.cur {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.tag {
+            justify-content: flex-end;
+            position: absolute;
+            bottom: 20rpx;
+            right: 20rpx;
+        }
+    }
 }
 
 
-.type-bar {
-  height: 80rpx;
-  line-height: 80rpx;
-  width: 100vw;
+.spike-box {
+    width: 100%;
+    height: auto;
+    height: 200px;
 
-  .choice-type {
-    height: 80rpx;
-    width: 80rpx;
-    line-height: 80rpx;
-  }
+    .header {
+        display: flex;
+        position: relative;
+        align-items: center;
+        height: 80rpx;
+        line-height: 80rpx;
+        width: 100%;
+        font-size: 22rpx;
+        padding: 10rpx;
+        background-image: linear-gradient(rgba(151, 57, 57, 0.5) 0%, rgba(151, 57, 57, 0.4) 10%, rgba(184, 42, 42, 0.3) 40%, rgba(184, 46, 46, 0.1) 90%);
+
+        .header-txt {
+            font-weight: 700 !important;
+            font-size: 22rpx;
+            margin: 0rpx 20rpx;
+        }
+
+        .header-tag {
+            height: 40rpx;
+            line-height: 40rpx;
+
+            .header-tag-left {
+                border-radius: 50rpx 0rpx 0rpx 50rpx;
+                padding: 0 10rpx;
+            }
+
+            .header-tag-right {
+                border-radius: 0rpx 50rpx 50rpx 0rpx;
+                padding: 0 20rpx;
+                letter-spacing: 2rpx;
+            }
+        }
+
+        .header-end {
+            position: absolute;
+            right: 20rpx;
+            font-size: 20rpx;
+            letter-spacing: 2rpx;
+        }
+    }
+
+    .body {
+        background-color: cyan;
+        height: 100%;
+        width: 100%;
+        height: 200rpx;
+        overflow: hidden;
+
+        .shop-scroll {
+            width: 100%;
+            height: 120rpx;
+            display: flex;
+            .shop {
+                height: 120rpx;
+                width: 180rpx;
+                padding: 8rpx;
+                position: relative;
+                margin: 10rpx;
+
+                image {
+                    height: 120rpx;
+                    width: 180rpx;
+                }
+
+                .tag {
+                    position: absolute;
+                    bottom: 10rpx;
+                    left: 10rpx;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
 }
